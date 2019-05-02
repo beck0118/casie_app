@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TweetApp</title>
+    <title>Casie</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,33 +20,29 @@
         <% end %>
       </div>
       <ul class="header-menus">
-        <% if @current_user %>
           <li>
-            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            <%= link_to("プランの選択", "/posts/index") %>
           </li>
           <li>
-            <%= link_to("投稿一覧", "/posts/index") %>
+            <%= link_to("ログアウト", "/posts/new") %>
           </li>
           <li>
-            <%= link_to("新規投稿", "/posts/new") %>
+            <%= link_to("About Casie", "/users/index") %>
           </li>
           <li>
-            <%= link_to("ユーザー一覧", "/users/index") %>
+            <%= link_to("プラン", "/logout", {method: :post}) %>
           </li>
           <li>
-            <%= link_to("ログアウト", "/logout", {method: :post}) %>
-          </li>
-        <% else %>
+          <%= link_to("作品リスト", "/logout", {method: :post}) %>
+        </li>
           <li>
-            <%= link_to("Casieとは", "https://casie.jp/") %>
-          </li>
-          <li>
-            <%= link_to("新規登録", "https://casie.jp/signup") %>
-          </li>
-          <li>
-            <%= link_to("ログイン", "https://casie.jp/login") %>
-          </li>
-        <% end %>
+            <%= link_to("メディア", "/logout", {method: :post}) %>
+        </li>
+           <li>
+            <%= link_to("マイページ", "/logout", {method: :post}) %>
+        </li>
+       
+          
       </ul>
     </header>
 
